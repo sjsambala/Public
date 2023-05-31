@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="Script/jquery-min.js"></script>
+    <script src="Script/Typing.js"></script>
+    <link rel="stylesheet" href="Style/Typing.css">
+</head>
+
+<body>
+    <input class="bold" type="file" id="sourceFile" onchange="handleFileSelect(event)">
+
+    <div id="typingInfoDiv">
+        <span class="box">
+            <span>Time <label class="bold zoom" id="timer"></label> </span>
+        </span>
+        <span class="speedBox">
+            Speed <label class="bold zoom" id="speedValue"></label>
+        </span>
+        <span class="box">
+            <span>Words <label class="bold zoom" id="wordsTyped"></label> </span>
+        </span>
+        <span class="mistakeBox">
+            <span>Mistakes <label class="bold zoom" id="mistakes"></label> </span>
+        </span>
+        <span class="box">
+            <span>key Strokes <label class="bold zoom" id="keyStrokes"></label></span>
+        </span>
+    </div>
+    <br>
+    <p>
+        <span class="customUIselectionspan">
+            <input type="checkbox" id="chkSpell" onclick="handleBrowserDefaultErrors()" />
+            <label for="chkSpell"> Show typing errors</label>
+        </span>
+        <span class="customUIselectionspan">
+            <input type="checkbox" id="chkShowAssignmentText" onclick="toggleAssignmentTextbox()" />
+            <label for="chkShowAssignmentText"> Show Assignment Text</label>
+        </span>
+        <span class="customUIselectionspan">
+            <input type="checkbox" id="chkWrap" onclick="toggleWordWrap()" />
+            <label for="chkWrap">Wrap</label>
+        </span>
+    </p>
+    <textarea class="txtBox readOnlyTextBox" id="assignmentTextBox" readonly></textarea>
+
+    <div id="typingDiv">
+        <button id="stopButton" class="stopButton" onclick="stopTyping()">Stop typing</button>
+        <br>
+        <textarea autocomplete="nope" class="txtBox noWrap" id="txtBox" onkeydown="startTyping(event)"
+            placeholder="Start typing here to calculate you typing speed."></textarea>
+    </div>
+
+    <div id="comparedTextDiv" class="comparedTextDiv">
+        This is result div
+    </div>
+</body>
+
+</html>

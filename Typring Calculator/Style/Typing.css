@@ -1,0 +1,104 @@
+body,
+html {
+    width: 99%;
+    height: 100vh;
+    margin: 10px;
+}
+
+.zoom {
+    zoom: 120%;
+}
+
+.box, .mistakeBox, .speedBox {
+background-color: white;
+height: 60px;
+width: 70px;
+margin: 8px;
+padding: 12px;
+border-radius: 5px;
+border-color: rgb(40 23 102);
+border-width: 7px;
+border-style: solid;
+}
+
+.speedBox{
+    border-color: green;
+}
+
+.mistakeBox{
+    border-color: maroon;
+}
+
+.customUIselectionspan{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+.txtBox {
+    width: 96%;
+    height: 380px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(60, 55, 55);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.noWrap{
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.comparedTextDiv{
+    width: 95%;
+    height: 400px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(60, 55, 55);
+    padding: 18px;
+    font-size: 16px;
+}
+
+.readOnlyTextBox{
+    border-color: gray;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.shadow{    
+    box-shadow: black 5px 8px 5px;
+}
+
+.stopButton {
+    float: right;
+    margin-right: 10px;
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    background-color: #d0451b;
+    border-radius: 6px;
+    border: 1px solid #942911;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px 7px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+}
+
+.correctWord{
+    color: black;
+}
+
+.incorrectWord{
+    color: red;
+}
+
+.tabSpan{
+    opacity: 0;
+}
