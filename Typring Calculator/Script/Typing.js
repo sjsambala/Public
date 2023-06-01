@@ -15,6 +15,8 @@ let timerInterval;
 
 let lastWordTyped = null;
 
+let doubleSpaceEnabled = true;
+
 $(window).on("load", function () {
     handleBrowserDefaultErrors();
     toggleAssignmentTextbox();
@@ -155,6 +157,11 @@ function compareUserAndMasterText() {
     let comparedTextDiv = document.getElementById("comparedTextDiv");
     comparedTextDiv.textContent = null;
 
+    let startComparingForm = userTypedText.substring(0, 30);
+    let idx = assignedTextData.indexOf(startComparingForm);
+
+    assignedTextData = assignedTextData.substring(idx);
+    
     let assignTextArr = assignedTextData.split(' ');
     let typedTextArr = userTypedText.split(' ');
 
@@ -237,6 +244,12 @@ function removeEnterWithoutPeriod(rawData) {
             data = data + text;
         }
     });
+	
+	if(doubleSpaceEnabled)
+	{
+		data = data.replaceAll(". ", ".  ");
+	}
+	
     return data.trim();
 }
 
